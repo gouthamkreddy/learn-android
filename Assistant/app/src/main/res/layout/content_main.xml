@@ -11,7 +11,8 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main"
-    tools:context="com.example.gouthamkreddy.assistant.MainActivity">
+    tools:context="com.example.gouthamkreddy.assistant.MainActivity"
+    android:background="@color/White" >
 
     <!--<TextView-->
         <!--android:text="CARDS"-->
@@ -32,7 +33,6 @@
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/cardView1"
-                android:layout_below="@+id/heading"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -52,6 +52,7 @@
                         android:background="@drawable/movies">
 
                         <TextView
+                            android:id="@+id/textView1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="MOVIES"
@@ -116,17 +117,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:background="@color/Gray" />
+                    android:background="@color/White" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/trains">
+                    android:background="@drawable/translate1">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TRAIN RUNNING STATUS"
+                        android:text="GOOGLE TRANSLATE"
                         android:textColor="@color/White"
                         android:layout_alignParentBottom="true"
                         android:padding="10dp"
@@ -144,7 +145,6 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginBottom="10dp"
                 card_view:cardCornerRadius="5dp" >
 
                 <ImageView
@@ -152,17 +152,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:background="@color/Gray" />
+                    android:background="@color/White" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/trains">
+                    android:background="@drawable/dictionary">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TRAIN RUNNING STATUS"
+                        android:text="DICTIONARY"
                         android:textColor="@color/White"
                         android:layout_alignParentBottom="true"
                         android:padding="10dp"
@@ -172,6 +172,8 @@
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
+
+
         </RelativeLayout>
 
     </ScrollView>
