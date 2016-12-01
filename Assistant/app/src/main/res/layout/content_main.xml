@@ -43,6 +43,9 @@
                     android:id="@+id/imageView1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClickMovies"
                     android:scaleType="centerCrop"
                     android:background="@color/Gray" />
 
@@ -81,6 +84,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClickTrains"
                     android:background="@color/Gray" />
 
                 <RelativeLayout
