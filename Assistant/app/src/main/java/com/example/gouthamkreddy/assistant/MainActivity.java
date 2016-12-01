@@ -13,11 +13,14 @@ import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Adapter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.util.Log;
+import android.content.Context;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,31 +30,75 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        fab.setOnClickListener(this);
+        ImageView ImageMovies = (ImageView) findViewById(R.id.imageViewMovies);
+        ImageMovies.setOnClickListener(this);
+        ImageView ImageTrains = (ImageView) findViewById(R.id.imageViewTrains);
+        ImageTrains.setOnClickListener(this);
+        ImageView ImageDictionary = (ImageView) findViewById(R.id.imageViewDictionary);
+        ImageDictionary.setOnClickListener(this);
 
-        RelativeLayout Layout = (RelativeLayout) findViewById(R.id.form_layout);
-        Layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClickMovies(View v) {
-                Intent intent = new Intent(MainActivity.this, Movies2Activity.class);
-//                EditText editText = (EditText) findViewById(R.id.edit_message);
-//                String message = editText.getText().toString();
-//                intent.putExtra(EXTRA_MESSAGE, message);
-                startActivity(intent);
-            }
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
-            @Override
-            public void onClickTrains(View v) {
-                Intent intent = new Intent(MainActivity.this, Movies2Activity.class);
-                startActivity(intent);
-            }
-        });
+//        ImageView ImageMovies = (ImageView) findViewById(R.id.form_layout);
+//        ImageMovies.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClickMovies(View view) {
+//                Intent intent = new Intent(MainActivity.this, Movies2Activity.class);
+////                EditText editText = (EditText) findViewById(R.id.edit_message);
+////                String message = editText.getText().toString();
+////                intent.putExtra(EXTRA_MESSAGE, message);
+//                startActivity(intent);
+//            }
+//        });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+
+            case R.id.fab:
+                ConnectivityManager connectivityManager
+                        = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+                if (activeNetworkInfo != null && activeNetworkInfo.isConnected())
+                {
+                    Snackbar.make(view, "Hi Goutham, You are connected to Network !", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                else
+                {
+                    Snackbar.make(view, "Hi Goutham, You are not connected to Network !", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+
+                break;
+
+            case R.id.imageViewMovies:
+                Intent intent1 = new Intent(MainActivity.this, Movies2Activity.class);
+                startActivity(intent1);
+                break;
+
+            case R.id.imageViewTrains:
+                Intent intent2 = new Intent(MainActivity.this, TrainsActivity.class);
+                startActivity(intent2);
+                break;
+
+            case R.id.imageViewDictionary:
+                Intent intent3 = new Intent(MainActivity.this, Movies2Activity.class);
+                startActivity(intent3);
+                break;
+
+            default:
+                break;
+        }
     }
 
     @Override

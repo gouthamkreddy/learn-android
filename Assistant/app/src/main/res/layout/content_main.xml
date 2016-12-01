@@ -40,7 +40,7 @@
                 card_view:cardCornerRadius="5dp" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/imageViewMovies"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clickable="true"
@@ -80,7 +80,7 @@
                 card_view:cardCornerRadius="5dp" >
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageViewTrains"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -154,7 +154,7 @@
                 card_view:cardCornerRadius="5dp" >
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageViewDictionary"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
