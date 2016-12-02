@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageMovies.setOnClickListener(this);
         ImageView ImageTrains = (ImageView) findViewById(R.id.imageViewTrains);
         ImageTrains.setOnClickListener(this);
+        ImageView ImageTranslate = (ImageView) findViewById(R.id.imageViewTranslate);
+        ImageTranslate.setOnClickListener(this);
         ImageView ImageDictionary = (ImageView) findViewById(R.id.imageViewDictionary);
         ImageDictionary.setOnClickListener(this);
 
@@ -82,18 +84,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.imageViewMovies:
-                Intent intent1 = new Intent(MainActivity.this, Movies2Activity.class);
-                startActivity(intent1);
+                Intent intentMovies = new Intent(MainActivity.this, Movies2Activity.class);
+                startActivity(intentMovies);
                 break;
 
             case R.id.imageViewTrains:
-                Intent intent2 = new Intent(MainActivity.this, TrainsActivity.class);
-                startActivity(intent2);
+                Intent intentTrains = new Intent(MainActivity.this, TrainsActivity.class);
+                startActivity(intentTrains);
+                break;
+
+            case R.id.imageViewTranslate:
+                Intent intentTranslate = new Intent(MainActivity.this, MoviesActivity.class);
+                startActivity(intentTranslate);
                 break;
 
             case R.id.imageViewDictionary:
-                Intent intent3 = new Intent(MainActivity.this, Movies2Activity.class);
-                startActivity(intent3);
+                Intent intentDictionary = new Intent(MainActivity.this, Movies2Activity.class);
+                startActivity(intentDictionary);
                 break;
 
             default:

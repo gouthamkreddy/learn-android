@@ -119,7 +119,7 @@
                 card_view:cardCornerRadius="5dp" >
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageViewTranslate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
