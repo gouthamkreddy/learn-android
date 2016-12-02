@@ -12,5 +12,13 @@ public class TrainsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trains);
 
         Intent intent = getIntent();
+
+//        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+//        TextView textView = new TextView(this);
+//        textView.setTextSize(40);
+//        textView.setText(message);
+
+//        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_movies2);
+//        layout.addView(textView);
     }
 }

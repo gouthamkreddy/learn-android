@@ -9,7 +9,6 @@ import android.view.View;
 //import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
@@ -137,12 +136,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-//TextView view = (TextView) findViewById(R.id.textView1);
-//view.setOnClickListener(new View.OnClickListener() {
-//
-//    @Override
-//    public void onClick(View v) {
-//
-//        }
-//
-//        })

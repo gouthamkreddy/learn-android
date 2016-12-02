@@ -45,7 +45,6 @@
                     android:layout_height="match_parent"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="onClickMovies"
                     android:scaleType="centerCrop"
                     android:background="@color/Gray" />
 
